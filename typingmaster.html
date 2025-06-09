@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Typing Master</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="typingtitle">
+                <h3>Typing Master</h3>
+            </div>
+            <div class="contentContainer">
+                <div class="boxContainer">
+                    <div>
+                        <div 
+                            class="startButton" 
+                            id="start"
+                        >start</div>
+                    </div>
+                    <div class="box">
+                        <div><b>speed</b></div>
+                        <div>
+                            <span id="speed">0</span> wpm
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div><b>errors</b></div>
+                        <span id="errors">0</span>
+                    </div>
+                    <div class="box">
+                        <div><b>Time</b></div>
+                        <div id="time">0</div>        
+                    </div>
+                </div>
+                <div class="lineContainer">
+                    <p id="line"></p>
+                </div>
+                <div>
+                    <input type="text" id="input" placeholder="start typing here....." disabled/>
+                </div>
+            </div>
+        </div>
+                <script src="typingmaster.js"></script>
+    </body>
+</html>
