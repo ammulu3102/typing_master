@@ -15,6 +15,7 @@ const errorsC1 = document.getElementById('errors');
 const TimeC1 = document.getElementById('time');
 const startButtonC1 = document.getElementById('start');
 
+// trigger when user click start button
 function startTyping() {
 
   inputC1.disabled = false;
@@ -24,35 +25,32 @@ function startTyping() {
   errorsC1.textContent = '0';
   TimeC1.textContent = '0';
 
-
-
-
   currentcodes = codes[Math.floor(Math.random() * codes.length)];
 
   lineC1.textContent = currentcodes;
-
-
-
 
   startTime = new Date().getTime();
   interval = setInterval(updateTimer, 1000);
 // console.log({interval}, 'UPDATE TIMER')
   inputC1.focus();
 }
+
 function updateTimer() {
   const elapsed = Math.floor((new Date().getTime() - startTime) / 1000);
   TimeC1.textContent = elapsed;
 }
+
 function endTest() {
   inputC1.disabled = true;
   // console.log({interval}, 'LOG 1')
-clearInterval(interval);
-// console.log ({interval}, 'LOG 2')
+  clearInterval(interval);
+  // console.log ({interval}, 'LOG 2')
   const elapsedMinutes = (new Date().getTime() - startTime) / 60000;
   const wordcount = currentcodes.split('').length;
   const wpm = Math.round(wordcount / elapsedMinutes);
   speedC1.textContent = wpm;
 }
+
 function checkInput() {
   const enteredText = inputC1.value;
   const expectedText = currentcodes.substring(0, enteredText.length);
